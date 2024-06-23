@@ -39,7 +39,7 @@ plt.title("Inverted Image")
 plt.axis('off')  # Hide the axis
 plt.show()
 
-blurred_image = cv2.GaussianBlur(inverted_image, (21, 21), 0)
+pencil_sketch = cv2.GaussianBlur(inverted_image, (21, 21), 0)
 plt.imshow(blurred_image)
 plt.title("Blurred Image")
 plt.axis('off')  # Hide the axis
