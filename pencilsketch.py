@@ -21,7 +21,6 @@ if Image is not None:
     pencil_sketch = cv2.GaussianBlur(inverted_image, (21, 21), 0)
     st.image(pencil_sketch, caption="Pencil Sketch")
 
-    # Prepare download button
     buf = BytesIO()
     cv2.imencode('.jpg', pencil_sketch, [cv2.IMWRITE_JPEG_QUALITY, 80])[1].tofile(buf)
     st.download_button("Download Pencil Sketch", buf.getvalue(), "pencil_sketch.jpg", "image/jpg")
